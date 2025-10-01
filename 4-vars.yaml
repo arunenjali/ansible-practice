@@ -7,6 +7,6 @@
     Trainer : Arun Enjali
   tasks :
   - name : Course Information
-    ansible.builtin,debug :
+    ansible.builtin.debug :
       msg : "Couse is : {{ COURSE}}, DURATION is : {{ DURATION}} , Trainer is : {{ Trainer}}"
 
