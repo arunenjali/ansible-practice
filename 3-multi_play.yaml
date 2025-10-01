@@ -1,0 +1,21 @@
+- name : Multi Level play book
+  hosts : frontend
+  become : yes
+  tasks :
+  - name : Play-01 and Task-01
+    ansible.builtin.debug:
+      msg : "This is printing from Play-01 and Task-01 "
+  - name : Play-01 and Task-02
+    ansible.builtin.debug:
+      msg : "This is printing from Play-01 and Task-02 "
+
+- name : Multi Level play book
+  hosts : frontend
+  become : yes
+  tasks :
+  - name : Play-02 and Task-01
+    ansible.builtin.debug:
+      msg : "This is printing from Play-02 and Task-01 "
+  - name : Play-02 and Task-02
+    ansible.builtin.debug:
+      msg : "This is printing from Play-02 and Task-02 "
