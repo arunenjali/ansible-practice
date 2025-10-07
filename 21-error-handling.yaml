@@ -1,0 +1,13 @@
+- name : Error handling 
+  hosts : local
+  connections : local
+  become : yes
+  tasks :
+  - name : verifying the OS level username
+    ansible.builtin.command : id Arun
+    register : user_output
+
+  - name : printing the user output
+    ansible.builtin.debug:
+      msg : "{{user_output}}"
+      
