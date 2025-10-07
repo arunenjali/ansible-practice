@@ -41,3 +41,11 @@
   - name : printing the linux command command_output
     ansible.builtin.debug :
       msg : "{{command_output}}"
+
+  - name : executing the redirect commands
+    ansible.builtin.command : ls -ltr > /tmp/ls_output.log
+    register : redirect_output
+
+  - name : printing the linux command command_output
+    ansible.builtin.debug :
+      msg : "{{redirect_output}}"
