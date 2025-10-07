@@ -11,3 +11,7 @@
   - name : printing the user output
     ansible.builtin.debug:
       msg : "{{user_output}}"
+
+  - name : creating the user
+    ansible.builtin.command : useradd Arun
+    when : user_output.rc != 0
