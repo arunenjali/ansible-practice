@@ -32,4 +32,4 @@
 
   - name : Validating the IP address
     ansible.builtin.debug :
-      msg : "IP address is : {{ myvar | ansible.utils.ipv4 }}"
+      msg : "{{ myvar | ansible.utils.ipv4 }}"
