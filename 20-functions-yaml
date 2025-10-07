@@ -35,7 +35,7 @@
       msg : " The ipaddress is : {{ ipaddress | ansible.utils.ipv4 }}"
 
   - name : executing the linux commands
-    ansible.builtin.command : id 
+    ansible.builtin.command : ls -ltr
     register : command_output
 
   - name : printing the linux command command_output
