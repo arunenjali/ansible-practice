@@ -33,3 +33,7 @@
   - name : Validating the IP address
     ansible.builtin.debug :
       msg : " The ipaddress is : {{ ipaddress | ansible.utils.ipv4 }}"
+
+  - name : executing the linux commands
+    ansible.builtin.command : id 
+    register : command_output
