@@ -3,10 +3,17 @@
   connection : local
   vars :
     Technologies : Linux, Shell, Ansible , Devops
+    tags :
+      Prod : Live
+      Nonprod : Dev
   tasks :
   - name : default variables
     ansible.builtin.debug :
       msg : "Hello : {{name | default('Arun')}}"
   - name : converting string to list
     ansible.builtin.debug :
-      msg : " Technologies are : {{ Technologies | split(',')}}"
+      msg : " Technologies are : {{ Technologies | split(', ')}}"
+
+  - name : converting dictionary to list
+    ansible.builtin.debug :
+      msg : " Targs are : {{ tags | dict2items}}"
