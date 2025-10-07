@@ -6,6 +6,9 @@
     tags :
       Prod : Live
       Nonprod : Dev
+    name : Arun Kumar Enjali
+    gmail : inFo@ArunEnjali.fun
+
   tasks :
   - name : default variables
     ansible.builtin.debug :
@@ -17,3 +20,7 @@
   - name : converting dictionary to list
     ansible.builtin.debug :
       msg : " Targs are : {{ tags | dict2items}}"
+
+  - name : converting to Upper case
+    ansible.builtin.debug :
+      msg : " Name is : {{ name | upper}}"
