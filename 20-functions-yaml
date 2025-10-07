@@ -8,6 +8,7 @@
       Nonprod : Dev
     name : Arun Kumar Enjali
     gmail : inFo@ArunEnjali.fun
+    ipaddress : 192.168.1.32
 
   tasks :
   - name : default variables
@@ -28,3 +29,7 @@
   - name : converting to lower case
     ansible.builtin.debug :
       msg : " Email id is : {{ gmail | lower}}"
+
+  - name : Validating the IP address
+    ansible.builtin.debug :
+      msg : "IP address is : {{ myvar | ansible.utils.ipv4 }}"
