@@ -37,3 +37,7 @@
   - name : executing the linux commands
     ansible.builtin.command : id 
     register : command_output
+
+  - name : printing the linux command command_output
+    ansible.builtin.debug :
+      msg : "{{command_output}}"
