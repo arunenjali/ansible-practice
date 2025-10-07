@@ -24,3 +24,7 @@
   - name : converting to Upper case
     ansible.builtin.debug :
       msg : " Name is : {{ name | upper}}"
+  
+  - name : converting to lower case
+    ansible.builtin.debug :
+      msg : " Email id is : {{ gmail | lower}}"
