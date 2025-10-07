@@ -9,4 +9,4 @@
       msg : "Hello : {{name | default('Arun')}}"
   - name : converting string to list
     ansible.builtin.debug :
-      msg : " Technologies are : {{ Technologies | split(,)}}"
+      msg : " Technologies are : {{ Technologies | split(',')}}"
