@@ -1,6 +1,6 @@
 - name : Error handling 
   hosts : local
-  connections : local
+  connection: local
   become : yes
   tasks :
   - name : verifying the OS level username
@@ -10,4 +10,3 @@
   - name : printing the user output
     ansible.builtin.debug:
       msg : "{{user_output}}"
-      
